@@ -1,0 +1,12 @@
+{
+  "name": "insights-product",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "~3.0.3",
+    "jquery": "~1.11.0",
+    "skrollr": "~0.6.24",
+    "skrollr-menu": "*",
+    "960-grid-system": "*"
+  },
+  "devDependencies": {}
+}
