@@ -13,137 +13,110 @@
         <!-- build:css styles/vendor.css -->
         <!-- bower:css -->
         <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="bower_components/960-grid-system/code/css/960.css">
+        <link rel="stylesheet" media='screen and (min-width: 1024px)' href="styles/960.css">
+        <link rel="stylesheet" media='screen and (min-width: 640px) and (max-width: 1023px)' href="styles/640.css">
+        <link rel="stylesheet" media='screen and (max-width: 639px)' href="styles/mobile.css">
         <!-- endbower -->
         <!-- endbuild -->
         <!-- build:css(.tmp) styles/main.css -->
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
     </head>
-    <body>
+    <body id="skrollr-body">
 
     <header>
-
-       <!--- sticky navigation here -->
+       <!--- STICKY NAVIGATION -->
        <nav class="wrap"
             data-anchor-target="#slide-2"
             data-200-top="opacity:0;"
             data-150-top="visibility:visible; top: -55px; opacity: 0.3;"
             data-100-top="opacity: 1; position: fixed; top: 0;"
-            data-2000-top="background-color:red; position: fixed; top: 0;">
+            data-2000-top="background-color:#FFF; position: fixed; top: 0;">
             <div class="container_12">
-                <div class="grid_6">My Company</div>
+                <div class="grid_6"><h2>Brand</h2></div>
                 <div class="grid_6">
-                    <ul class="nav nav-pills pull-right">
-                        <li class="active"><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Contact</a></li>
+                    <ul class="nav pull-right">
+                        <li class="active"><a href="#slide-1">Intro</a></li>
+                        <li><a href="#slide-2">Section 1</a></li>
+                        <li><a href="#slide-3">Section 2</a></li>
+                        <li><a href="#slide-4">Section 3</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
+        <!-- END OF NAVIGATION BAR -->
     </header>
 
-    <section id="slide-1" class="homeSlide">
-        <div class="bcg"
-            data-center="background-position: 50% 0px;"
-            data-top-bottom="background-position: 50% -100px;"
-            data-anchor-target="#slide-1"
-        >
-            <div class="hsContainer container_12">
-                <div class="hsContent grid_12"
-                    data-center="opacity: 1"
-                    data-106-top="opacity: 0"
-                    data-anchor-target="#slide-1 h2"
-                >
-                    <h2>Fade out elements before <br>they leave viewport</h2>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="slide-2" class="secondSlide">
-
-            <div class="hsContainer container_12">
-                <div class="hsContent grid_12"
-                    data-center="opacity: 1"
-                    data-106-top="opacity: 0"
-                    data-anchor-target="#slide-2 h2"
-                >
-                    <div class="header">
-                        <h3 class="text-muted">insights product</h3>
-                    </div>
-
-                    <h2>Fade out elements before <br>they leave viewport</h2>
-                </div>
-            </div>
-    </section>
-
-    <section id="slide-3" class="thirdSlide">
-        >
-            <div class="hsContainer container_12">
-                <div class="hsContent grid_12"
-                    data-center="opacity: 1"
-                    data-106-top="opacity: 0"
-                    data-anchor-target="#slide-3 h2"
-                >
-                    <h2>Fade out elements before <br>they leave viewport</h2>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <section id="slide-4" class="thirdSlide">
-        >
-            <div class="hsContainer container_12">
-                <div class="hsContent grid_12"
-                    data-center="opacity: 1"
-                    data-106-top="opacity: 0"
-                    data-anchor-target="#slide-4 h2"
-                >
-                    <div class="grid_10">
-                    <p>
-                      780
-                    </p>
-                    </div>
-                    <!-- end .grid_10 -->
+    <!--- SECTION ONE OF PARALLAX -->
+    <section id="slide-1" data-start="400">
+        <div class="bcg" data-center="background-position: 50% 0px" data-top-bottom="background-position: 50% -100px;">
+            <div class="container_12">
+                <h1 class="grid_2 suffix_8">Brand</h1>
+                <p class="grid_2 login"><a href="#">Log In</a></p>
+                <div class="clear"></div>
+                <div class="grid_12 introduction">
+                    <h3>Welcome to the site...brief intro here</h3>
+                    <p class="grid_12 prefix_3 suffix_3 ">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation.</p>
                     <div class="clear"></div>
-                    <div class="grid_3">
-                    <p>
-                      220
-                    </p>
-                    </div>
-                    <!-- end .grid_3 -->
-
-                    <div class="clear"></div>
-                    <div class="grid_1 prefix_3 suffix_8">
-                    <p>
-                      60
-                    </p>
-                    </div>
-                    <!-- end .grid_1.prefix_3.suffix_8 -->
-
-                    <!-- end .grid_3.alpha -->
-                    <div class="grid_3 omega">
-                      <p>
-                        220
-                      </p>
-                    </div>
-                    <!-- end .grid_3.omega -->
-                    </div>
-                    <!-- end .grid_6.push_6 -->
-                    <div class="grid_6 pull_6">
-                    <div class="grid_3 alpha">
-                      <p>
-                        220
-                      </p>
-                    </div>
-                    <h2>Fade out elements before <br>they leave viewport</h2>
+                    <button class="btn btn-lg btn-default" onclick="">Find out more...</button>
                 </div>
             </div>
         </div>
     </section>
+    <!--- SECTION ONE END -->
+
+    <!--- SECTION TWO OF PARALLAX -->
+    <section id="slide-2" class="skrollable">
+            <div class="container_12">
+                <div class="grid_12" data-center="opacity: 1" data-top="opacity: 0">
+                    <h3>Lorem ipsum dolor sit amet</h3>
+                    <p class="grid_12 prefix_3 suffix_3 ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, officiis cupiditate labore autem vel sed odio delectus. Hic, a, alias possimus quibusdam officiis rerum aspernatur veniam dicta quae illum est!</p>
+                </div>
+            </div>
+    </section>
+    <!--- SECTION TWO END -->
+
+    <!--- SECTION THREE OF PARALLAX -->
+    <section id="slide-3" class="skrollable">
+        <div class="container_12">
+            <div data-center="opacity: 1" data-top="opacity: 0">
+                <img class="grid_4 image" src="images/sl1210.jpg" />
+                <div class="grid_8">
+                    <h3>Lorem ipsum dolor sit amet</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, officiis cupiditate labore autem vel sed odio delectus. Hic, a, alias possimus quibusdam officiis rerum aspernatur veniam dicta quae illum est!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--- SECTION THREE END -->
+
+    <!--- SECTION FOUR OF PARALLAX -->
+    <section id="slide-4" class="skrollable">
+        <div class="container_12">
+            <img class="grid_4 image" src="images/sl1210.jpg" />
+            <div class="grid_8">
+                <h3>Lorem ipsum dolor sit amet</h3>
+                <p class="grid_12 prefix_3 suffix_3 ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, officiis cupiditate labore autem vel sed odio delectus. Hic, a, alias possimus quibusdam officiis rerum aspernatur veniam dicta quae illum est!</p>
+            </div>
+        </div>
+    </section>
+    <!--- SECTION FOUR END -->
+
+    <footer>
+            <div data-anchor-target="#slide-3" class="container_12">
+                <div class="grid_12">
+                <nav>
+                    <ul class="nav">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#slide-1">Support</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy</a></li>
+                    </ul></nav>
+                </div>
+            </div>
+    </footer>
 
     </body>
         <!--[if lt IE 10]>
@@ -154,7 +127,7 @@
         <!-- bower:js -->
         <script src="bower_components/jquery/dist/jquery.js"></script>
         <script src="bower_components/skrollr/src/skrollr.js"></script>
-        <!-- <script src="bower_components/skrollr-menu/src/skrollr.menu.js"></script> -->
+        <script src="bower_components/skrollr-menu/src/skrollr.menu.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 

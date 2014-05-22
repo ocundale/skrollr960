@@ -3,6 +3,13 @@ body {
     /*padding-top: 20px;*/
     height:3000px;
     padding-bottom: 20px;
+    font-size:14px;
+}
+h1 {
+    color: white;
+}
+h2 {
+    font-size: 2.2em;
 }
 
 /* Custom page header */
@@ -10,47 +17,52 @@ body {
     border-bottom: 1px solid #e5e5e5;
 }
 
-p {
-    border:1px solid gray;
-}
-
-/* Make the masthead heading the same height as the navigation */
-.header h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
-}
-
 nav {
     background-color: rgba(255, 255, 255, 0.9);
-    border: 1px solid #ccc;
     height: 55px;
-    top: 0;
     position: absolute;
     /* hold tight... */
     visibility: none;
     /* we'll override these shortly */
     z-index: 1000;
     width: 100%;
+    -webkit-transition: all 0.5s ease;
+}
+header nav {
+    top: 0;
+}
+footer nav {
+}
+footer nav ul.nav{
+    display: block;
+    float:left;
+    margin:auto;
 }
 
 nav ul {
     list-style: none;
+}
+nav ul.nav {
+    margin-top: 5px;
 }
 nav li {
     float: left;
     border-right: 1px solid #ccc;
     padding: 0 10px;
 }
+nav h2 {
+    margin-top: 10px;
+}
 nav li:last-child {
     border: 0;
 }
 section {
-    height: 1000px;
+    height: 910px;
+    position: relative;
+    display: block;
 }
 
-/* CSS */
+/* CSS *//*
 .hsContainer {
     display: table;
     table-layout: fixed;
@@ -58,17 +70,17 @@ section {
     height: 100%;
     overflow: hidden;
     position: relative;
-    opacity: 0;
+    opacity: 1;
 }
 .hsContent {
     max-width: 450px;
     margin: -150px auto 0 auto;
     display: table-cell;
     vertical-align: middle;
-    color: red;
+    color: #FFF;
     padding: 0 8%;
     text-align: center
-}
+}*/
 .bcg {
     background-position: center center;
     background-repeat: no-repeat;
@@ -83,6 +95,33 @@ section {
     background:url('../images/bg.jpg');
 }
 /* Slide 2 */
+#slide-2 .bcg {
+
+}
+/* Slide 1 */
+#slide-3 h3,
+#slide-3 p {
+    color:#EEE;
+}
+.login {
+    font-size: 14px;
+    margin-top:25px;
+    text-align: right;
+}
+.introduction {
+    margin-top:10%;
+    text-align: center;
+    color:#FFF;
+}
+.introduction h3 {
+    font-size: 3.6em;
+}
+.introduction p {
+    margin: 10% 0;
+    font-size: 2em;
+    font-weight: normal;
+}
+/* Slide 2 */
 #slide-2 {
     background-color:#CCC;
 }
@@ -90,35 +129,38 @@ section {
     background-color:#333;
 }
 #slide-4 {
-    background-color:#eee;
+    background-color:#EEE;
 }
 
-
-h1 {
-    color: white;
+/* Responsive: Mobiles and up (Grid is fluid below width of 639) */
+@media screen and (max-width: 639px) {
+    body {
+        /*padding-top: 20px;*/
+        font-size:7px;
+    }
+    nav li {
+        padding:0;
+    }
+    nav li a {
+        padding: 5px 5px;
+    }
 }
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-    .container {
-        max-width: 730px;
+/* Responsive: Portrait tablets and up (Grid fixed to 640px wide) */
+@media screen and (min-width: 640px) and (max-width: 1023px) {
+    body {
+        /*padding-top: 20px;*/
+        font-size:11px;
     }
+    nav li {
+        padding:0;
+    }
+    nav li a {
+        padding:0;
+    }
+}
 
-    /* Remove the padding we set earlier */
-    .header,
-    .marketing,
-    .footer {
-        padding-left: 0;
-        padding-right: 0;
-    }
+/* Responsive: Desktop and up (Grid fixed to 1024px wide)*/
+@media screen and (min-width: 1024px) {
 
-    /* Space out the masthead */
-    .header {
-        margin-bottom: 30px;
-    }
-
-    /* Remove the bottom border on the jumbotron for visual effect */
-    .jumbotron {
-        border-bottom: 0;
-    }
 }
